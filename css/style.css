@@ -1,0 +1,352 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+:root {
+  --middleGrey: #8a817c;
+  --darklava: #463f3a;
+  --alabaster: #f4f3ee;
+  --logoColor: #bcb8b1;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+input {
+  border: none;
+  outline: none;
+}
+label {
+  margin-top: 2rem;
+}
+ul {
+  list-style-type: none;
+}
+
+body {
+  background-color: var(--middleGrey);
+}
+
+/* Navbar */
+.nav {
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+  border-bottom: 4px solid var(--darklava);
+  padding: 10px 0;
+  align-items: center;
+  height: 75px;
+  margin-bottom: 20px;
+}
+
+.logo {
+  width: 50px;
+  height: 50px;
+}
+
+.search-bar {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  padding: 0 0 0 1.2rem;
+  margin: 0 20px;
+  flex-wrap: wrap;
+}
+
+.search-bar > .textinput {
+  border-radius: 10px;
+  width: 100½;
+  flex-basis: 1200px;
+  height: 40px;
+  padding-left: 30px;
+  min-width: 135px;
+  max-width: 1200px;
+}
+
+.search-bar > .search-icon {
+  position: absolute;
+  left: 15px;
+  align-self: center;
+  margin: 0px 15px;
+}
+
+.avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+.avatar:hover {
+  cursor: pointer;
+}
+.logo:hover {
+  cursor: pointer;
+}
+/* Form & Grid .Together */
+.together {
+  background-color: var(--middleGrey);
+}
+
+/* Sidebar */
+.sidebar {
+  width: 220px;
+  min-height: 600px;
+  display: block;
+  float: left;
+  background-color: var(--darklava);
+  margin-right: 5px;
+  padding: 1rem;
+  border-top-right-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+}
+.d-flex {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.flex-direction-column {
+  flex-direction: column;
+}
+.sidebar-menu-list {
+  width: 100%;
+  margin-top: 1rem;
+}
+.sidebar-menu-item {
+  margin: 10px 0;
+  width: 178px;
+  padding: 10px 0;
+  border: 1px solid var(--alabaster);
+}
+a {
+  text-decoration-color: var(--alabaster);
+}
+.sidebar-menu-link {
+  padding-left: 0.5rem;
+}
+.sidebar-menu-list > li:hover {
+  background-color: var(--alabaster);
+  cursor: pointer;
+}
+.sidebar-menu-list > li {
+  background-color: var(--logoColor);
+  cursor: pointer;
+  text-align: center;
+  border-radius: 2rem;
+}
+.sidebar-menu-link i {
+  margin-right: 1rem;
+  color: var(--logoColor);
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  background-color: var(--middleGrey);
+  padding: 2rem;
+  grid-gap: 1rem;
+}
+.grid-item {
+  background-color: var(--logoColor);
+  padding: 2rem;
+  border-radius: 1rem;
+}
+/* Form start*/
+/* div abuslama kendine not ?DSAdasd*/
+
+.companyForm {
+  margin: auto;
+  display: none;
+  flex-direction: column;
+  align-items: stretch;
+  padding: 2rem;
+  border-radius: 2rem;
+  max-width: 90%;
+  width: auto;
+  background-color: var(--darklava);
+  color: var(--alabaster);
+}
+.companyForm > .select > span {
+  display: block;
+}
+.companyForm > input {
+  padding: 0.5rem;
+  border-radius: 1rem;
+  min-width: 1rem;
+}
+.companyForm > textarea {
+  border-radius: 1rem;
+  border: none;
+  outline: none;
+  resize: vertical;
+  min-height: 2rem;
+  padding: 1rem;
+}
+.companyForm > select {
+  padding: 0.5rem;
+  border-radius: 1rem;
+  border-top: 1rem;
+
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: linear-gradient(45deg, transparent 50%, var(--darklava) 50%),
+    linear-gradient(135deg, var(--darklava) 50%, transparent 50%),
+    linear-gradient(to right, var(--middleGrey), var(--middleGrey));
+  background-position: calc(100% - 20px) calc(1em + 2px),
+    calc(100% - 15px) calc(1em + 2px), 100% 0;
+  background-size: 5px 5px, 5px 5px, 3em 3em;
+  background-repeat: no-repeat;
+}
+.companyForm > select:focus {
+  outline: none;
+}
+.formButton {
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 1rem;
+  margin-top: 2rem;
+}
+
+.menuButtonOn {
+  background: url("/images/menu.png") no-repeat;
+  width: 24px;
+  height: 24px;
+  border: none;
+  display: none;
+  margin-left: 1rem;
+}
+.menuButtonOff {
+  background-image: url("/images/close.png") no-repeat;
+  width: 24px;
+  height: 24px;
+  border: none;
+  display: inline-block;
+  float: right;
+}
+.menuButtonOff:hover,
+.menuButtonOn:hover {
+  cursor: pointer;
+}
+.grid-img img {
+  padding: 1rem;
+  border-radius: 2rem;
+  width: 100%;
+  margin: 0 auto;
+}
+@media screen and (max-width: 600px) {
+  .sidebar {
+    display: none;
+  }
+  .menuButtonOff {
+    display: none;
+  }
+  .menuButtonOn {
+    display: inline-block;
+  }
+}
+/* Form end */
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 2rem;
+  border: 1px solid #888;
+  width: 80%;
+  border-radius: 2rem;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  background: none;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  outline: none;
+  border: none;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* @media screen {
+    article {
+        background-color: var(--middleGrey);
+        margin-top: 20px;
+        
+    }
+    aside {
+        background-color: middleGrey;
+        margin-top: 20px;
+        
+    }
+}
+@media screen and (min-width: 480px){
+    article {
+        background-color: lightsteelblue;
+        margin-top: 20px;
+        border: 3px solid black;
+        box-sizing: border-box;
+    }
+    aside {
+        background-color: middleGrey;
+        margin-top: 20px;
+        border: 3px solid black;
+        box-sizing: border-box;
+    }
+}
+
+@media screen and (min-width: 768px){
+    article {
+        background-color: lightgrey;
+        margin-top: 20px;
+        border: 4px solid black;
+        box-sizing: border-box;
+    }
+    aside {
+        background-color: lime;
+        margin-top: 20px;
+        border: 4px solid black;
+        box-sizing: border-box;
+    }
+}
+
+@media screen and (min-width: 1400px){
+    article {
+        background-color: lime;
+        margin-top: 20px;
+        border: 6px solid black;
+        box-sizing: border-box;
+    }
+    aside {
+        background-color: lightgray;
+        margin-top: 20px;
+        border: 6px solid black;
+        box-sizing: border-box;
+    }
+} */
